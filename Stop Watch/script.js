@@ -1,5 +1,6 @@
 const startStopBtn = document.getElementById('startStopBtn')
-const resetBtn = document.getElementById('resetBtn')
+const resetBtn = document.getElementById('restartBtn')
+let desc = document.getElementsByClassName('desc').innerText
 
 let milliseconds = 0
 let seconds = 0
@@ -61,22 +62,27 @@ function stopWatch(){
 }
 
 
-
 startStopBtn.addEventListener('click', ()=> {
 
     if(timerStatus === 'stopped') {
         timeInterval = window.setInterval(stopWatch, 100)
         document.getElementById('startStopBtn').innerHTML = `<i class='fa-solid fa-pause' id='pause'></i>`
         timerStatus = 'started'
-    }else{
+
+        desc = 'stopped'
+        console.log(desc);
+    }
+    else{
         window.clearInterval(timeInterval)
         document.getElementById('startStopBtn').innerHTML = `<i class='fa-solid fa-play' id='play'></i>`
         timerStatus = 'stopped'
+        
     }
 
 })
 
 resetBtn.addEventListener('click', ()=> {
+
     console.log('cliked');
     window.clearInterval(timeInterval)
     seconds = 0
