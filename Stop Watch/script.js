@@ -1,6 +1,7 @@
 const startStopBtn = document.getElementById('startStopBtn')
 const resetBtn = document.getElementById('restartBtn')
-let desc = document.getElementsByClassName('desc').innerText
+let laptime = document.getElementsByClassName('showPauseTime')[0]
+let time = document.getElementById('timer')
 
 let milliseconds = 0
 let seconds = 0
@@ -14,6 +15,7 @@ let leadingHours = 0
 
 let timeInterval = null
 let timerStatus = 'stopped'
+let list = []
 
 function stopWatch(){
 
@@ -68,26 +70,43 @@ startStopBtn.addEventListener('click', ()=> {
         timeInterval = window.setInterval(stopWatch, 100)
         document.getElementById('startStopBtn').innerHTML = `<i class='fa-solid fa-pause' id='pause'></i>`
         timerStatus = 'started'
+        list = []
 
-        desc = 'stopped'
-        console.log(desc);
     }
     else{
         window.clearInterval(timeInterval)
         document.getElementById('startStopBtn').innerHTML = `<i class='fa-solid fa-play' id='play'></i>`
         timerStatus = 'stopped'
         
-    }
+        list.push(time.innerText)
+        
+        console.log(list)
 
+        for(i=0; i<list.length; i++){
+            let li = document.createElement('li')
+            li.appendChild(document.createTextNode(list[i]));
+            laptime.appendChild(li);
+            
+        }
+
+        // console.log(laptime.innerText);
+    }
 })
 
 resetBtn.addEventListener('click', ()=> {
 
-    console.log('cliked');
+    console.log('stopped');
     window.clearInterval(timeInterval)
+    milliseconds = 0
     seconds = 0
     minutes = 0
     hours = 0
 
-    document.getElementById('timer').innerText = `00 : 00 : 00`
+    list = []
+    desc.innerText = ''
+
+    document.getElementById('startStopBtn').innerHTML = `<i class='fa-solid fa-play' id='play'></i>`
+    timerStatus = 'stopped'
+
+    document.getElementById('timer').innerText = `00:00:00:00`
 })
