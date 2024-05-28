@@ -103,7 +103,7 @@ resetBtn.addEventListener('click', ()=> {
     hours = 0
 
     list = []
-    desc.innerText = ''
+    laptime.innerText = ''
 
     document.getElementById('startStopBtn').innerHTML = `<i class='fa-solid fa-play' id='play'></i>`
     timerStatus = 'stopped'
