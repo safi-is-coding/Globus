@@ -79,6 +79,7 @@ body{
     margin-bottom: 10px;
     border-radius: 5px;
     padding: 20px 10px;
+    text-decoration: none;
 }
 
 #task-added li{
@@ -92,6 +93,7 @@ body{
 }
 
 .task button{
+    cursor: pointer;
     background-color: rgb(20, 146, 184);
     height: 1.5rem;
     border: none;
@@ -99,7 +101,6 @@ body{
     border-radius: 2px;
 }
 .task-check{
-    background-color: green;
     width: 10%;
 }
 
@@ -111,3 +112,6 @@ body{
     width: 10%;
 }
 
+.checked{
+    text-decoration: line-through;
+}

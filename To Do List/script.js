@@ -20,11 +20,11 @@ const addTask = () => {
     if (!taskName) {
         setTimeout(() => {
             error.style.display = 'block'
-        }, 200)
+        }, 2000)
         return;
     }
     else{
-        taskCount.push('added')
+        taskCount.push(taskName)
         displayCount(taskCount)
 
         const task = document.createElement('div')
@@ -40,45 +40,47 @@ const addTask = () => {
         li.appendChild(task)
         newTaskAdded.appendChild(li)
 
-        const deleteBtns = document.querySelectorAll('.delete')
+        
+        
+        // deleting the list container
+        const deleteBtns = task.querySelector('.delete')
         console.log(deleteBtns);
-        // deleteBtns.forEach((button) => {
-        //     button.addEventListener('click', (e) => {
-        //         e.target.parentElement.parentElement.remove()
-        //         console.log(taskCount);
-                
-        //     }
-        // )
-        // });
 
-        for(i=0; i<deleteBtns.length; i++)
-        {
-            deleteBtns[i].addEventListener('click', (e)=> {
-                console.log(e);
-                e.target.parentElement.parentElement.remove();
-                console.log(taskCount);
-                taskCount.pop()
-                console.log(taskCount);
-                displayCount(taskCount)
+        deleteBtns.addEventListener('click', (e)=> {
+            // console.log(e);
+            e.target.parentElement.parentElement.remove();
+            // console.log(taskCount);
+            taskCount.pop()
+            // console.log(taskCount);
+            displayCount(taskCount)
 
-            })
-        }
+        })
 
+        //editing the list container
+        const editBtns = task.querySelector('.edit')
+        editBtns.addEventListener('click', (e)=> {
+            // console.log(e.target.parentElement.parentElement.innerText);
+            let editInput = e.target.parentElement.parentElement.innerText
+            newTaskInput.value = editInput
 
-        // deleteBtns.addEventListener('click', (e)=> {
-        //     console.log(e.target.parentElement.parentElement);
+        })
 
-        // })
+        const checked = task.querySelector('.task-check')
+        checked.addEventListener('click', (e)=> {
+            if (e.target.checked) {
+                e.target.parentElement.classList.add('checked')
+                console.log(task);
+            }else{
+                e.target.parentElement.classList.remove('checked')
+                console.log(task);
+            }
+        })
 
-        // taskCount = taskCount-1
-        // console.log(taskCount);
-
-        // displayCount(taskCount)
-
+        
     }
+    newTaskInput.value = ''
 
 }
-    
 
 
 
