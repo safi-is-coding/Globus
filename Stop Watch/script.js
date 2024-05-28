@@ -109,4 +109,4 @@ resetBtn.addEventListener('click', ()=> {
     timerStatus = 'stopped'
 
     document.getElementById('timer').innerText = `00:00:00:00`
-})
+});
