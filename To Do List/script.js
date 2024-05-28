@@ -15,12 +15,13 @@ const addTask = () => {
     
     // displayCount(taskCount)
     const taskName = newTaskInput.value.trim()
-    error.style.display = 'none'
+    // error.style.display = 'none'
 
     if (!taskName) {
+        error.style.display = 'block'
         setTimeout(() => {
-            error.style.display = 'block'
-        }, 2000)
+            error.style.display = 'none'
+        }, 3000)
         return;
     }
     else{
