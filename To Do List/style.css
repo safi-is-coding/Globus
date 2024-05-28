@@ -5,8 +5,8 @@
 }
 
 body{
-    height: 100vh;
-    background: linear-gradient(180deg,#ffd045, #4687ff );
+    height: 100%;
+    background: #4687ff;
 }
 
 .app{
@@ -30,6 +30,7 @@ body{
     display: grid;
     grid-template-columns: 8fr 4fr;
     gap: 1em;
+    margin-bottom: 30px;
 }
 
 #wrapper input{
@@ -68,3 +69,45 @@ body{
     border-radius: 0.8em;
     display: none;
 }
+
+.task{
+    display: flex;
+    align-items: center;
+    width: 100%;
+    background-color: #b8d1ff;
+    height: 2em;
+    margin-bottom: 10px;
+    border-radius: 5px;
+    padding: 20px 10px;
+}
+
+#task-added li{
+    list-style: none;
+}
+.task input{
+    height: 1.2rem;
+}
+.task i{
+    color: white;
+}
+
+.task button{
+    background-color: rgb(20, 146, 184);
+    height: 1.5rem;
+    border: none;
+    margin-right: 10px;
+    border-radius: 2px;
+}
+.task-check{
+    background-color: green;
+    width: 10%;
+}
+
+.taskname{
+    width: 70%;
+}
+
+.edit, .delete{
+    width: 10%;
+}
+
