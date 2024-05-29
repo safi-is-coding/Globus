@@ -5,11 +5,11 @@
 		"price": "$40.00",
 		"images": [
 			{
-				"url": "./assets/T-shirt-black.png",
+				"url": "/assets/T-shirt-black.png",
 				"color": "#272727"
 			},
 			{
-				"url": "./assets/T-shirt-darkblue.png",
+				"url": "/assets/T-shirt-darkblue.png",
 				"color": "#23284E"
 			}
 		]
@@ -21,7 +21,7 @@
 		"price": "$52.99",
 		"images": [
 			{
-				"url": "./assets/oversize-T-shirt-blue.png",
+				"url": "/assets/oversize-T-shirt-blue.png",
 				"color": "#4F8196"
 			}
 		]
@@ -33,15 +33,15 @@
 		"price": "$69.99",
 		"images": [
 			{
-				"url": "./assets/sweater-white.png",
+				"url": "/assets/sweater-white.png",
 				"color": "#E8E8E8"
 			},
 			{
-				"url": "./assets/sweater-orange.png",
+				"url": "/assets/sweater-orange.png",
 				"color": "#FAB364"
 			},
 			{
-				"url": "./assets/sweater-pink.png",
+				"url": "/assets/sweater-pink.png",
 				"color": "#F2CFCD"
 			}
 		]
@@ -52,11 +52,11 @@
 		"price": "$60.00",
 		"images": [
 			{
-				"url": "./assets/jeans-blue.png",
+				"url": "/assets/jeans-blue.png",
 				"color": "#2C88B3"
 			},
 			{
-				"url": "./assets/jeans-black.png",
+				"url": "/assets/jeans-black.png",
 				"color": "#505654"
 			}
 		]
