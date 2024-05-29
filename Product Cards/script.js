@@ -1,7 +1,7 @@
 const mostPopularProducts = document.querySelector('.most-popular-products')
 
 
-const jsonFile = './products.json'
+const jsonFile = '/products.json'
 
 fetch(jsonFile).then(response => {
     // console.log(response.json());
