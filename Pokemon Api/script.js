@@ -10,29 +10,49 @@
 
 const pokemonName = document.querySelector('#pokemonName')
 const searchBtn = document.querySelector('#search')
-const describe = document.querySelector('.desc')[0]
+const charName = document.querySelector('#charName')
+const pokemonImage = document.querySelector('#pokemonImage')
+const description = document.querySelector('.description')
 
 
 
 const fetchData = async () => {
     try {
-            const name = pokemonName.value 
+            const name = pokemonName.value.toLowerCase()
             const response = await fetch(`https://pokeapi.co/api/v2/pokemon/${name}`) 
 
             if(!response.ok){
+                pokemonImage.style.display = 'none'
                 throw new Error('Could Not Fetch Resource')
+            }
+            if(name === ''){
+                pokemonImage.style.display = 'none'
+                throw new Error('Please enter a character')
             }
             
             const data = await response.json()
+            const imageUrl = data.sprites.front_default
+
+            // console.log(imageUrl);
             
-            // describe.innerHTML(data.name);
-            console.log(data);
+            charName.innerHTML = data.name.toUpperCase();
+            pokemonImage.src = imageUrl
+            pokemonImage.style.display = 'block'
+            description.style.backgroundColor = 'rgb(255, 255, 181)'
+            // console.log(charName.innerHTML);
         
         } 
-        catch (error) {
-            console.log(error);
-        }
+    catch (error) {
+        charName.innerHTML = error;
+    }
 
 }
 
 searchBtn.addEventListener('click',fetchData)
+
+
+pokemonName.addEventListener('keypress', function(event) {
+    if (event.key === 'Enter') {
+        fetchData();
+    }
+});

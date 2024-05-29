@@ -7,13 +7,18 @@
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <h1>Fetch Pokemon Characters Data</h1>
-    <input type="text" id="pokemonName" placeholder="Enter Pokemon Name ">
-    
-    <button id="search">Search</button>
-
-    <div class="desc"></div>
-    
+    <section>
+        <h1>Pokemon Characters</h1>
+        <div class="entry">
+            <input type="text" id="pokemonName" placeholder="Enter Pokemon Character ">
+            <button id="search">Search</button>
+        </div>
+        
+        <div class="description">
+            <h6 id="charName"></h6>
+            <img src="" alt="Pokemon Image" id="pokemonImage" style="display: none;">
+        </div>
+    </section>
     <script src="script.js"></script>
 </body>
 </html>
