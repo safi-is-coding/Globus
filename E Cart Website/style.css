@@ -1,0 +1,88 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+body{
+    background-color: whitesmoke;
+}
+
+h1{
+    text-align: center;
+    background-color: rgb(255, 184, 184);
+}
+
+.search{
+    margin: 2% 0;
+    display: flex;
+    justify-content: end;
+    align-items: center;
+    gap: 1rem;
+    padding-right: 1rem;
+}
+
+select{
+    width: 10rem;
+    padding: 5px;
+    outline: none;
+    border-radius: 5px;
+}
+
+section{
+    width: 100%;
+    padding: 5%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 5%;
+    flex-wrap: wrap;
+}
+
+.card{
+    background-color: white;
+    width: 250px;
+    height: auto;
+    padding-top: 2%;
+    border: 1px solid rgb(195, 195, 195);
+    border-radius: 1rem;
+    margin-bottom: 5%;
+}
+
+.card img{
+    width: 50%;
+    height: 50%;
+    position: relative;
+    left: 4rem;
+    aspect-ratio: 3/4;
+}
+
+.details{
+    background-color: rgba(0, 90, 128, 0.173);
+    padding: 5%;
+    width: 100%;
+    height: auto;
+    border-radius: 0 0 1rem 1rem;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+#title{
+    font-size: .7rem;
+}
+
+#price{
+    font-size: 1rem;
+    color: green;
+}
+
+#description{
+    font-size: .4rem;
+}
+
+#rating{
+    font-size: .5rem;
+}
+

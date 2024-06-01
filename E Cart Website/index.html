@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Products</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <h1>Shoppers Square</h1>
+    </header>
+    <div class="search">
+        <label for="category">Select Category</label>
+        <select name="category" id="category" onchange="displayCategory()">
+            <option value="show all">Show All</option>
+            <option value="men's clothing">men's clothing</option>
+            <option value="women's clothing">women's clothing</option>
+            <option value="jewelery">jewelery</option>
+            <option value="electronics">electronics</option>
+        </select>
+    </div>
+    
+    <section class="container"></section>
+
+    <script src="script.js"></script>
+</body>
+</html>

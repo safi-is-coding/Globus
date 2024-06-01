@@ -163,7 +163,20 @@ a{
 .container{
     background-color: whitesmoke;
     margin: 5%;
-    display: flex;
+    display: none;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 10px;
+    height: 100%;
+    padding: 2rem;
+    border-radius: .5rem;
+}
+
+.filterContainer{
+    background-color: whitesmoke;
+    margin: 5%;
+    display: none;
     justify-content: center;
     align-items: center;
     flex-wrap: wrap;
@@ -209,3 +222,15 @@ a{
     font-weight: bold;
 }
 
+@media (max-width:800px) {
+    nav{
+        padding-right: 20px;
+    }
+    nav h1{
+        font-size: 1.3rem;
+    }
+    .entry input{
+        width: 50%;
+    }
+    
+}
