@@ -22,43 +22,53 @@ const category = document.querySelector('#category')
 
 
 const fetchData = async (categoryType) => {
-    const response = await fetch('https://fakestoreapi.com/products')
+    
+    try{
 
-    const data = await response.json()
+        const response = await fetch('https://fakestoreapi.com/products')
 
-    // console.log(data);
+        const data = await response.json()
 
-    container.innerHTML = ''
-    for (i=0; i<data.length; i++){
-        
-        if(data[i].category === categoryType){
-            container.innerHTML += `
-                <div class="card">
-                    <img src="${data[i].image}" alt="image">
-                    <div class="details">
-                        <h5 id="title">${data[i].title}</h5>
-                        <h4 id="price">$ ${data[i].price}</h4>
-                        <p id="description">${data[i].description}</p>
-                        <p id="rating">Rating : <b>${data[i].rating.rate}</b>&nbsp;&nbsp;&nbsp;Count : <b>${data[i].rating.count}</b></p>
+        // console.log(data);
+
+        container.innerHTML = ''
+        for (i=0; i<data.length; i++){
+            
+            if(data[i].category === categoryType){
+                container.innerHTML += `
+                    <div class="card">
+                        <img src="${data[i].image}" alt="image">
+                        <div class="details">
+                            <h5 id="title">${data[i].title}</h5>
+                            <h4 id="price">$ ${data[i].price}</h4>
+                            <p id="description">${data[i].description}</p>
+                            <p id="rating">Rating : <b>${data[i].rating.rate}</b>&nbsp;&nbsp;&nbsp;Count : <b>${data[i].rating.count}</b></p>
+                        </div>
                     </div>
-                </div>
-                `
-        }
-        else if(categoryType === 'show all'){
-            container.innerHTML += `
-                <div class="card">
-                    <img src="${data[i].image}" alt="image">
-                    <div class="details">
-                        <h5 id="title">${data[i].title}</h5>
-                        <h4 id="price">$ ${data[i].price}</h4>
-                        <p id="description">${data[i].description}</p>
-                        <p id="rating">Rating : <b>${data[i].rating.rate}</b>&nbsp;&nbsp;&nbsp;Count : <b>${data[i].rating.count}</b></p>
+                    `
+            }
+            else if(categoryType === 'show all'){
+                container.innerHTML += `
+                    <div class="card">
+                        <img src="${data[i].image}" alt="image">
+                        <div class="details">
+                            <h5 id="title">${data[i].title}</h5>
+                            <h4 id="price">$ ${data[i].price}</h4>
+                            <p id="description">${data[i].description}</p>
+                            <p id="rating">Rating : <b>${data[i].rating.rate}</b>&nbsp;&nbsp;&nbsp;Count : <b>${data[i].rating.count}</b></p>
+                        </div>
                     </div>
-                </div>
-                `
+                    `
+            }
+            
         }
-        
+
+
+    }catch(error){
+        container.innerHTML = `<p>ERROR: ${error}</p>`
     }
+
+    
 }
 
 window.onload(fetchData('show all'))

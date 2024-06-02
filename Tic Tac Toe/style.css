@@ -1,0 +1,47 @@
+body{
+    background-color: rgb(60, 164, 255);
+}
+
+.cell{
+    background-color: antiquewhite;
+    width: 75px;
+    height: 75px;
+    border: 2px solid;
+    box-shadow: 0 0 0 2px black;
+    line-height: 75px;
+    font-size: 50px;
+    cursor: pointer;
+}
+h1{
+    color: rgb(255, 255, 255);
+    font-size: 3.5rem;
+    width: 100%;
+    border-bottom: 3px solid white;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;  
+}
+.cell:active{
+    background-color: rgb(255, 225, 186);
+}
+
+#gameContainer{
+    font-family: "Permanent Marker", cursive;
+    text-align: center;
+}
+
+#cellContainer{
+    display: grid;
+    grid-template-columns: repeat(3, auto);
+    width: 225px;
+    margin: auto;
+}
+
+button{
+    background-color: #ff0252;
+    border: none;
+    color: white;
+    border-radius: 5px;
+    padding: 10px 20px;
+    width: 225px;
+    font-size: 1rem;
+    cursor: pointer;
+}
