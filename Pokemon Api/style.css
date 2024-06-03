@@ -1,121 +1,3 @@
-/* *{
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-}
-
-body{
-    background-color: #a64c4c;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    min-height: 100vh;
-}
-
-section{
-    margin: 0 2%;
-    background-color: white;
-    padding: 1.5rem;
-    border-radius: 1rem;
-    width: 500px;
-    height: 100%;
-}
-
-.description{
-    background-color: transparent;
-    margin-top: 1rem;
-    padding: 1rem;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-direction: column;
-    border-radius: .8rem;
-    height: 100%;
-    width: 100%;
-}
-
-.entry {
-    width: 100%;
-    height: 2rem;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    gap: 10px;
-}
-
-.entry input{
-    width: 80%;
-    border: none;
-    height: 100%;
-    padding: 10px;
-    border-bottom: 1px solid blue;
-    outline: none;
-}
-.entry input:focus{
-    border-bottom: 1.5px solid rgb(0, 200, 0);
-
-}
-.entry button{
-    width: 20%;
-    border: none;
-    height: 100%;
-    font-size: .7rem;
-    border-radius: 2px;
-    background-color: rgb(99, 146, 255);
-    color: white;
-    cursor: pointer;
-    transition: 0.5s ease;
-}
-
-.entry button:hover{
-    background-color: rgb(48, 110, 255);
-
-}
-
-h1{
-    font-size: 2rem;
-    text-align: center;
-    margin-bottom: 1rem;
-}
-h6{
-    text-align: left;
-}
-
-img{
-    width: 20%;
-    height: 20%;   
-    transition: transform .8s ease;
-    cursor: pointer;
-    overflow: hidden;
-    margin: 8% 0;
-}
-img:hover{
-    transform: scale(1.5);
-}
-
-#sound{
-    height: 20px;
-    background-color: aqua;
-    width: 100%;
-}
-
-audio{
-    width: 100%;
-    height: 100%;
-    background-color: blue;
-}
-
-
-@media (max-width:800px) {
-    h1{
-        font-size: 1.5rem;
-    }
-    section{
-        width: 70%;
-    }
-} */
-
 *{
     margin: 0;
     padding: 0;
@@ -124,14 +6,14 @@ audio{
 }
 
 body{
-    background-color: gray;
+    background-color: rgb(0, 112, 106);
 }
 
 nav{
     display: flex;
     justify-content: space-between;
     align-items: center;
-    background-color: rgb(70, 70, 70);
+    background-color: rgb(0, 177, 115);
     padding-left: 30px;
     padding-right: 50px;
     height: 4rem;
@@ -150,8 +32,9 @@ nav{
     height: 2rem;
     padding: 0 1rem;
     border: none;
-    background-color: lightblue;
+    background-color: rgb(25, 105, 132);
     border-radius: .3rem;
+    color: white;
 }
 
 a{
@@ -161,7 +44,7 @@ a{
 }
 
 .container{
-    background-color: whitesmoke;
+    background-color: rgb(231, 255, 209);
     margin: 5%;
     display: none;
     justify-content: center;
@@ -187,12 +70,13 @@ a{
 }
 
 .card{
-    background-color: rgba(226, 226, 226, 0.873);
+    background-color: rgba(255, 255, 255, 0.873);
     width: 250px;
     margin-bottom: 10px;
     height: 100%;
     border: 1px solid rgb(182, 182, 182);
     border-radius: 2%;
+    box-shadow: 0 0 3px 1px rgba(0, 0, 0, 0.349);
 }
 
 .card img{
@@ -210,14 +94,14 @@ a{
 }
 
 .cardDetails{
-    background-color: white;
+    background-color: rgba(191, 255, 241, 0.601);
     width: 100%;
     padding: .5rem 1rem;
     border-radius: 0 0 5% 5%;
 }
 
 #pokemonType{
-    color: gray;
+    color: rgb(226, 122, 122);
     font-size: .8rem;
     font-weight: bold;
 }

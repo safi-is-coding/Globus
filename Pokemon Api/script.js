@@ -46,7 +46,7 @@ const fetchFilterData = async (pname) => {
                 
                 container.style.display = 'none'
                 filterContainer.style.display = 'flex'
-                filterContainer.innerHTML += `
+                filterContainer.innerHTML = `
                 
                 <div class="card" onclick='getUrl("https://pokeapi.co/api/v2/pokemon/${index+1}/")'>
                     <img src="https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/dream-world/${index+1}.svg" alt="pokemon image" id="pokemonImage">
