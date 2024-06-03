@@ -35,10 +35,10 @@ function changebg(){
         let navicons = document.querySelectorAll('.nav-icons')
         document.querySelector('.country-name').style.color = 'darkgray';
 
-        // for (link in navbuttons)
-        // {
-        //     navbuttons[link].style.color = 'white';
-        // }
+        for (link in navbuttons)
+        {
+            navbuttons[link].style.color = 'white';
+        }
 
         for (icon in navicons)
         {

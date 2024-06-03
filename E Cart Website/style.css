@@ -6,12 +6,14 @@
 }
 
 body{
-    background-color: whitesmoke;
+    background-color: rgb(214, 214, 214);
 }
 
 h1{
+    padding: 10px;
     text-align: center;
-    background-color: rgb(255, 184, 184);
+    background-color: rgb(190, 162, 255);
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
 }
 
 .search{
@@ -23,12 +25,20 @@ h1{
     padding-right: 1rem;
 }
 
+label{
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+}
+
 select{
     width: 10rem;
     padding: 5px;
     outline: none;
-    border-radius: 5px;
+    border-radius: 3px;
+    border: none;
+    background-color: rgb(109, 128, 253);
+    color: white;
 }
+
 
 section{
     width: 100%;
