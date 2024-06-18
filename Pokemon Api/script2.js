@@ -2,9 +2,12 @@ const container = document.querySelector('.container')
 let pokemonName = document.querySelector('h1')
 const api = localStorage.getItem('url')
 
+const urlParams = new URLSearchParams(window.location.search);
+const id = urlParams.get('id');
+
 const fetchData = async () => {
     try {
-        const response = await fetch(api);
+        const response = await fetch(`https://pokeapi.co/api/v2/pokemon/${id}`);
         const data = await response.json();
 
         pokemonName.innerHTML = data.name.toUpperCase()
