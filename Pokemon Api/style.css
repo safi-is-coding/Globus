@@ -27,9 +27,17 @@ nav {
 nav h1 {
     font-size: 1.8rem;
     letter-spacing: 1px;
+    width: 50%;
+}
+.entry{
+    display: flex;
+    justify-content: end;
+    align-items: center;
+    width: 50%;
 }
 
 .entry input {
+    width: 50%;
     height: 2rem;
     padding: 0.5rem 1rem;
     border: none;
@@ -126,14 +134,28 @@ a {
 
 @media (max-width: 800px) {
     nav {
-        padding-right: 20px;
+        flex-direction: column;
+        height: 100%;
+        padding: 20px;
     }
 
     nav h1 {
-        font-size: 1.3rem;
+        font-size: 2rem;
+        margin-bottom: 10px;
+    }
+
+    .entry{
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        width: 100%;
     }
 
     .entry input {
-        width: 50%;
+        width: 70%;
+    }
+
+    #search{
+        width: 30%;
     }
 }

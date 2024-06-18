@@ -17,7 +17,7 @@ const fetchData = async () => {
             const pokemonId = index + 1;
             container.innerHTML += `
                 <div class="card" onclick="redirectToPokemonPage(${pokemonId})">
-                    <img src="https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/dream-world/${pokemonId}.svg" alt="pokemon image" id="pokemonImage">
+                    <img src="https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/dream-world/${pokemonId}.svg" alt="${pokemon.name}" id="pokemonImage">
                     <div class="cardDetails">
                         <p id="pokemonType">#${pokemonId}</p> 
                         <h4 id="charName">${pokemon.name.toUpperCase()}</h4>
@@ -44,7 +44,7 @@ const fetchFilterData = async (pname) => {
             filterContainer.style.display = 'flex';
             filterContainer.innerHTML = `
                 <div class="card" onclick="redirectToPokemonPage(${pokemonId})">
-                    <img src="https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/dream-world/${pokemonId}.svg" alt="pokemon image" id="pokemonImage">
+                    <img src="https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/dream-world/${pokemonId}.svg" alt="${matchedPokemon.name}" id="pokemonImage">
                     <div class="cardDetails">
                         <p id="pokemonType">#${pokemonId}</p> 
                         <h4 id="charName">${matchedPokemon.name.toUpperCase()}</h4>
