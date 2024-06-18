@@ -1,4 +1,5 @@
 const container = document.querySelector('.container')
+const header = document.querySelector('header')
 let pokemonName = document.querySelector('h1')
 const api = localStorage.getItem('url')
 
@@ -10,7 +11,12 @@ const fetchData = async () => {
         const response = await fetch(`https://pokeapi.co/api/v2/pokemon/${id}`);
         const data = await response.json();
 
-        pokemonName.innerHTML = data.name.toUpperCase()
+        header.innerHTML = `
+            <h1 id="pokemonName">${data.name.toUpperCase()}</h1>
+            <button id="playBtn"><span class="material-symbols-outlined">volume_up</span></button>
+        `
+
+        // pokemonName.innerHTML = data.name.toUpperCase()
 
             container.innerHTML = `
                 

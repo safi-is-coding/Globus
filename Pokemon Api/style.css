@@ -63,11 +63,6 @@ nav h1 {
     background-color: #d77a26;
 }
 
-a {
-    text-decoration: none;
-    height: 100%;
-    color: black;
-}
 
 .container, .filterContainer {
     background-color: whitesmoke;
@@ -140,6 +135,8 @@ a {
     }
 
     nav h1 {
+        text-align: center;
+        width: 100%;
         font-size: 2rem;
         margin-bottom: 10px;
     }
